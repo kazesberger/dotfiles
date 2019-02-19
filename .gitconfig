@@ -1,0 +1,16 @@
+[credential]
+        helper = /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring
+[user]
+        name = kazesberger
+        email = klaus.azesberger@bearingpoint.com
+[alias]
+        lol = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+        lola = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --all
+[push]
+        default = simple
+[pull]
+        rebase = true
+[rebase]
+        autoStash = true
+[core]
+        excludesfile = ~/.gitignore

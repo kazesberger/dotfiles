@@ -1,0 +1,13 @@
+*.iml
+.idea
+*.code-workspace
+.history
+
+# bearingpoint stuff
+/.ans-pb.sh
+/.ans-vault.sh
+/.os_credentials-4tenant.sh
+/.os_credentials.sh
+/.tenant-list
+/.vpn_ansible_dev_env.sh
+
