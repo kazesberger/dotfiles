@@ -1,0 +1,5 @@
+echo -e '\e[1m -=] \e[44mLOADING SSHRC\e[49m'
+
+source $SSHHOME/.sshrc.d/.bash_aliases
+
+echo -e '\e[1m -=] \e[44mHome is where your dotfiles are loaded!\e[49m :-)'

@@ -8,12 +8,10 @@ workonJdk() {
         rm -f /usr/java/workon && ln -s ${JAVA_HOME} /usr/java/workon
 }
 
-source ~/.dotfile-scripts.d/*.sh
-
 alias vi='vim'
 alias sshr='ssh -A -l root '
 alias sshc='ssh -A -l core '
-alias li='ls -lahtr'
+alias l='ls -lahtr'
 alias scp-ext='rsync -z --partial --size-only --progress --rsh="ssh -p 22 -c blowfish-cbc"'
 alias air=/opt/air/air.sh
 alias chownme='sudo chown -R kazesberger:kazesberger'
