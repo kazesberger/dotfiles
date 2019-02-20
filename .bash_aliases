@@ -27,3 +27,6 @@ alias ap='ansible-playbook  --vault-password-file=~/.vpass'
 
 alias ade='ansible_dev_env'
 alias ader='ansible_dev_env_with_role'
+
+# TODO delete this after including snx config
+alias vpn='snx -s vpn.infonova.com -u kazesberger'
