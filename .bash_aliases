@@ -9,6 +9,7 @@ workonJdk() {
 }
 
 alias vi='vim'
+alias ssh='sshrc '
 alias sshr='ssh -A -l root '
 alias sshc='ssh -A -l core '
 alias l='ls -lahtr'
