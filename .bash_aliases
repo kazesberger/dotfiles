@@ -31,3 +31,4 @@ alias ader='ansible_dev_env_with_role'
 
 # TODO delete this after including snx config
 alias vpn='snx -s vpn.infonova.com -u kazesberger'
+alias sudo='sudo ' # https://askubuntu.com/questions/22037/aliases-not-available-when-using-sudo
