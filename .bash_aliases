@@ -32,3 +32,9 @@ alias ader='ansible_dev_env_with_role'
 # TODO delete this after including snx config
 alias vpn='snx -s vpn.infonova.com -u kazesberger'
 alias sudo='sudo ' # https://askubuntu.com/questions/22037/aliases-not-available-when-using-sudo
+
+alias cat='bat -p '
+alias pipenv3='pipenv --three '
+
+# https://github.com/kubernetes/kubernetes/issues/27308
+# alias k='kubectl "--context=${KUBECTL_CONTEXT:-$(kubectl config current-context)}" ${KUBECTL_NAMESPACE/[[:alnum:]-]*/--namespace=${KUBECTL_NAMESPACE}}'
