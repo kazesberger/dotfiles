@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+# TODO extract stuff to install-scripts
+
 # zsh
 sudo apt-get install zsh
 if [ ! -d "${ZDOTDIR:-$HOME}/.zprezto" ] ; then 
@@ -26,3 +28,9 @@ echo 'eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)' >> ~/.profile
 
 # fzf
 which fzf || $(brew install fzf && /home/linuxbrew/.linuxbrew/opt/fzf/install)
+
+# TODO cli PR client (hub?)
+
+for script in ./install-scripts/*.sh; do
+  bash "$script" -H   || break
+done
