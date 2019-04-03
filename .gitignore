@@ -10,3 +10,7 @@
 /.os_credentials.sh
 /.tenant-list
 /.vpn_ansible_dev_env.sh
+
+# maven
+
+pom.xml.versionsBackup
