@@ -3,6 +3,9 @@
 *.code-workspace
 .history
 
+# python
+.venv
+
 # bearingpoint stuff
 /.ans-pb.sh
 /.ans-vault.sh
