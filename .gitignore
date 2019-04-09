@@ -21,3 +21,4 @@ pom.xml.versionsBackup
 # clj
 
 .nrepl-port
+.rebel_readline_history

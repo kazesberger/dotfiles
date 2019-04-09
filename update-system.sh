@@ -10,6 +10,6 @@ cp ./.sshrc ~/.sshrc
 
 # now ensure/update the links
 rm -f ~/.sshrc.d/.bash_aliases
-ln -s ~/.bash_aliases ~/.sshrc.d/.bash_aliases 
+ln -s ~/.bash_aliases ~/.sshrc.d/.bash_aliases || true
 
 source ~/.bash_aliases
