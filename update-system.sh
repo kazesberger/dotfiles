@@ -13,3 +13,9 @@ rm -f ~/.sshrc.d/.bash_aliases
 ln -s ~/.bash_aliases ~/.sshrc.d/.bash_aliases || true
 
 source ~/.bash_aliases
+
+if [ -e /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret ] ; then
+    git config --global credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+else
+    git config --global credential.helper /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring
+fi
