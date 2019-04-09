@@ -17,8 +17,11 @@ alias scp-ext='rsync -z --partial --size-only --progress --rsh="ssh -p 22 -c blo
 alias air=/opt/air/air.sh
 alias chownme='sudo chown -R kazesberger:kazesberger'
 alias ansible_dev_env='docker run -ti --hostname "kazesberger-WS" --entrypoint=/bin/bash "$@" -v `pwd`:/work -v ~/.m2/settings.xml:/root/.m2/settings.xml \
+    -e SSH_PRIV_KEY=id_rsa \
     -v ~/.ssh:/tmp/.ssh.host \
     -v ~/.vpass:/tmp/.vpass \
+    -v ~/.jenkins-api-tokens.vpass:/tmp/jenkins-api-tokens.vpass:ro \
+    -v ~/.jenkins-api-tokens.yml:/tmp/jenkins-api-tokens.yml:ro \
     -v ~/openrc.sh:/tmp/openrc.sh \
     --net=host \
     -w /work \

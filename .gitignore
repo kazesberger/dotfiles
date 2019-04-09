@@ -17,3 +17,7 @@
 # maven
 
 pom.xml.versionsBackup
+
+# clj
+
+.nrepl-port
