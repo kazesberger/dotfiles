@@ -34,3 +34,10 @@ which fzf || $(brew install fzf && /home/linuxbrew/.linuxbrew/opt/fzf/install)
 for script in ./install-scripts/*.sh; do
   bash "$script" -H   || break
 done
+
+## NVM
+# git clone https://github.com/creationix/nvm.git ~/.nvm
+	# ansible-block: ~/.bashrc ~/.zshrc ~/.profile
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
