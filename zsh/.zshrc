@@ -23,7 +23,7 @@ source ~/.bash_aliases
 
 for file in ~/.kube/* ; do 
   if [ -f $file ] ; then 
-     export KUBECONFIG=$KUBECONFIG:$(basename $file)
+     export KUBECONFIG=$KUBECONFIG:$file
   fi
 done
 
