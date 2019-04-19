@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 rsync --delete -avz ./.localrc.d/ ~/.localrc.d
 
@@ -7,6 +7,13 @@ cp ./.gitignore ~/.gitignore
 cp ./.ssh/config ~/.ssh/config
 cp ./.bash_aliases ~/.bash_aliases
 cp ./.sshrc ~/.sshrc
+
+# TODO setup  / mb consider switch to oh-my-zsh
+# zsh prezto 
+cp ./zsh/.zpreztorc ~/.zpreztorc
+cp ./zsh/.zshrc ~/.zshrc
+
+source ~/.zshrc
 
 # now ensure/update the links
 rm -f ~/.sshrc.d/.bash_aliases
