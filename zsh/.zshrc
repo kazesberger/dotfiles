@@ -21,6 +21,7 @@ source ~/.localrc.d/*.sh
 source ~/.zspaceship
 source ~/.bash_aliases
 
+unset KUBECONFIG
 for file in ~/.kube/* ; do 
   if [ -f $file ] ; then 
      export KUBECONFIG=$KUBECONFIG:$file
@@ -36,5 +37,3 @@ source <(minikube completion zsh)
 # env | grep SPACESHIP
 
 export GOPATH=$HOME/go
-
-source ~/git/kubectx/completion/
