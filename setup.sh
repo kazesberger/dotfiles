@@ -41,3 +41,20 @@ done
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# helm
+# curl -o helm.tar.gz https://storage.googleapis.com/kubernetes-helm/helm-v2.13.1-linux-amd64.tar.gz
+# tar -xvzf helm.tar.gz
+# sudo mv linux-amd64/helm /usr/local/bin/helm
+# rm -f helm.tar.gz
+# rm -rf helm.tar.gz
+sudo snap install helm --classic
+
+git clone https://github.com/ahmetb/kubectx.git ~/git/kubectx
+sudo ln -s /home/kazesberger/git/kubectx/kubectx /usr/local/bin/kubectx
+sudo ln -s /home/kazesberger/git/kubectx/kubens /usr/local/bin/kubens
+
+sudo mkdir -p /usr/share/zsh/functions/Completion/kubectx
+sudo chmod -R 755 /usr/share/zsh/functions/Completion/kubectx
+sudo ln -s ~/git/kubectx/completion/kubectx.zsh /usr/share/zsh/functions/Completion/kubectx/_kubectx.zsh
+sudo ln -s ~/git/kubectx/completion/kubens.zsh /usr/share/zsh/functions/Completion/kubectx/_kubens.zsh

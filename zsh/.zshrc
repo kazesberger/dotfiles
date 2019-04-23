@@ -37,3 +37,4 @@ source <(minikube completion zsh)
 
 export GOPATH=$HOME/go
 
+source ~/git/kubectx/completion/
