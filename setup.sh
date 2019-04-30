@@ -58,3 +58,5 @@ sudo mkdir -p /usr/share/zsh/functions/Completion/kubectx
 sudo chmod -R 755 /usr/share/zsh/functions/Completion/kubectx
 sudo ln -s ~/git/kubectx/completion/kubectx.zsh /usr/share/zsh/functions/Completion/kubectx/_kubectx.zsh
 sudo ln -s ~/git/kubectx/completion/kubens.zsh /usr/share/zsh/functions/Completion/kubectx/_kubens.zsh
+
+sudo apt-get install direnv
