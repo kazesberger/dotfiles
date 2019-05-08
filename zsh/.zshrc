@@ -37,5 +37,6 @@ source <(minikube completion zsh)
 # env | grep SPACESHIP
 
 export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
 
 eval "$(direnv hook zsh)"

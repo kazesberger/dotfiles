@@ -12,6 +12,7 @@ cp ./.sshrc ~/.sshrc
 # zsh prezto 
 cp ./zsh/.zpreztorc ~/.zpreztorc
 cp ./zsh/.zshrc ~/.zshrc
+cp ./zsh/.zspaceship ~/.zspaceship
 
 source ~/.zshrc
 
