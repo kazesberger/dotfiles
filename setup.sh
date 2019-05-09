@@ -60,3 +60,10 @@ sudo ln -s ~/git/kubectx/completion/kubectx.zsh /usr/share/zsh/functions/Complet
 sudo ln -s ~/git/kubectx/completion/kubens.zsh /usr/share/zsh/functions/Completion/kubectx/_kubens.zsh
 
 sudo apt-get install direnv
+
+pushd /opt
+export ISTIO_VERSION=${1:-1.1.5}
+curl -L https://git.io/getLatestIstio | sh -
+echo 'export PATH=${PATH}:/opt/istio-$ISTIO_VERSION/bin' >> ~/.zshrc
+source ~/.zshrc
+popd

@@ -57,3 +57,6 @@ function mkcd {
     mkdir $1 && cd $1
   fi
 }
+
+
+export PATH="$PATH:/home/kazesberger/git/sips/platform/istio-1.1.5/bin"
