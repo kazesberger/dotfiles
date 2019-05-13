@@ -64,6 +64,6 @@ sudo apt-get install direnv
 pushd /opt
 export ISTIO_VERSION=${1:-1.1.5}
 curl -L https://git.io/getLatestIstio | sh -
-echo 'export PATH=${PATH}:/opt/istio-$ISTIO_VERSION/bin' >> ~/.zshrc
+echo 'export PATH=${PATH}:'"/opt/istio-$ISTIO_VERSION/bin" >> ~/.zshrc
 source ~/.zshrc
 popd

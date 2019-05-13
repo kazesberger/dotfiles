@@ -60,3 +60,5 @@ function mkcd {
 
 
 export PATH="$PATH:/home/kazesberger/git/sips/platform/istio-1.1.5/bin"
+
+alias mks='KUBECONFIG=~/.kube/minikube minikube start'
