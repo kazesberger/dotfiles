@@ -1,6 +1,7 @@
 *.iml
 .idea
 *.code-workspace
+.vscode
 .history
 
 # python
