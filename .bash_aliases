@@ -62,3 +62,9 @@ function mkcd {
 export PATH="$PATH:/home/kazesberger/git/sips/platform/istio-1.1.5/bin"
 
 alias mks='KUBECONFIG=~/.kube/minikube minikube start'
+
+function kbopensvc {
+  local svc_name=$1
+  local ns=$2
+  echo https://$(kbg svc $svc_name -n $ns -o jsonpath='{.status.loadBalancer.ingress[0].ip}'):$(kbg svc $svc_name -n $ns -o jsonpath='{.spec.ports[0].targetPort}')
+}
