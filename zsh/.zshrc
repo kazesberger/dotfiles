@@ -31,6 +31,7 @@ done
 source <(kubectl completion zsh)
 source <(helm completion zsh)
 source <(minikube completion zsh)
+source <(skaffold completion zsh)
 
 # echo "SPACESHIP_CONFIG:"
 # echo "--------------------------"
