@@ -1,10 +1,19 @@
 #!/bin/bash -e
 
+install_fzf() {
+	pushd /opt
+	curl -L https://github.com/junegunn/fzf/archive/0.18.0.tar.gz -o fzf.tar.gz
+	tar -xvzf fzf.tar.gz
+	./fzf-0.18.0/install --all
+	rm -f fzf.tar.gz
+	popd
+}
+
 # TODO extract stuff to install-scripts
 
 # zsh
 sudo apt-get install zsh
-if [ ! -d "${ZDOTDIR:-$HOME}/.zprezto" ] ; then 
+if [ ! -d "${ZDOTDIR:-$HOME}/.zprezto" ] ; then
 	git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 	rm -f /home/kazesberger/.zlogin /home/kazesberger/.zlogout /home/kazesberger/.zpreztorc /home/kazesberger/.zshenv /home/kazesberger/.zprofile /home/kazesberger/.zshrc
 	zsh -c 'setopt EXTENDED_GLOB && for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}" ; done'
@@ -15,7 +24,7 @@ fi
 which bat || $(wget https://github.com/sharkdp/bat/releases/download/v0.10.0/bat_0.10.0_amd64.deb && sudo dpkg -i bat_0.10.0_amd64.deb)
 
 # linuxbrew
-if [ ! -d /home/linuxbrew/.linuxbrew ] ; then 
+if [ ! -d /home/linuxbrew/.linuxbrew ] ; then
        	sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
 	eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 	echo 'eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)' >> ~/.profile
@@ -27,7 +36,7 @@ eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 echo 'eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)' >> ~/.profile
 
 # fzf
-which fzf || $(brew install fzf && /home/linuxbrew/.linuxbrew/opt/fzf/install)
+which fzf || install_fzf
 
 # TODO cli PR client (hub?)
 

@@ -33,6 +33,8 @@ source <(helm completion zsh)
 source <(minikube completion zsh)
 source <(skaffold completion zsh)
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # echo "SPACESHIP_CONFIG:"
 # echo "--------------------------"
 # env | grep SPACESHIP
